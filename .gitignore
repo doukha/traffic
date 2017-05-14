@@ -1,0 +1,41 @@
+## svn directories
+*.svn
+
+## eclipse resources
+*.classpath
+.project
+.springBeans
+*.settings
+.metadata
+.externalToolBuilders
+
+## intellij
+.idea
+*.iml
+driver
+
+## config
+.sonar-ide.properties
+
+## generated
+*.log
+*.log.1
+*.lck
+*.dat
+target
+classes
+git.properties
+*.versionsBackup
+
+## others
+.m2
+*qrycache*
+atlassian-ide-plugin.xml
+Thumbs.db
+.DS_Store
+
+src/main/frontend/node/
+src/main/webapp
+src/main/resources/vidal-value.properties
+!/src/main/webapp/assets/images/VVlogo.png
+
