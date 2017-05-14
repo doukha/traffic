@@ -33,9 +33,3 @@ git.properties
 atlassian-ide-plugin.xml
 Thumbs.db
 .DS_Store
-
-src/main/frontend/node/
-src/main/webapp
-src/main/resources/vidal-value.properties
-!/src/main/webapp/assets/images/VVlogo.png
-
