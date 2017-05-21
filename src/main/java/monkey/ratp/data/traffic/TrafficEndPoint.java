@@ -1,6 +1,5 @@
 package monkey.ratp.data.traffic;
 
-import io.reactivex.Observable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,8 +19,9 @@ public class TrafficEndPoint {
 
     @RequestMapping(method = RequestMethod.GET, path = "/{type}/{code}")
     @ResponseBody
-    public Observable<String> getTraffic(@PathVariable("type") String type, @PathVariable("code") String code) {
-        return this.trafficService.obsTraffic(type, code);
+    public String getTraffic(@PathVariable("type") String type, @PathVariable("code") String code) {
+        return this.trafficService.obsTraffic(type, code).firstElement().blockingGet();
+
     }
 
 }

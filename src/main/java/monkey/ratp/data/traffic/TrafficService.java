@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by samyboukhris on 14/05/2017.
@@ -25,8 +24,7 @@ public class TrafficService {
 
     public Observable<String> obsTraffic(String type, String code) {
         RestTemplate restTemplate = new RestTemplate();
-        return Observable.interval(interval, TimeUnit.SECONDS).timeInterval()
-                         .flatMap((x) -> Observable.just(getTraffic(restTemplate, type, code)));
+        return Observable.just(getTraffic(restTemplate, type, code));
     }
 
     private String getTraffic(RestTemplate restTemplate, String type, String code) {
